@@ -3,15 +3,15 @@ export class Contact {
     public name: string;
     public email: string;
     public phone: string;
-    public imageURL: string;
-    public group: string;
+    public imageUrl: string;
+    public group: Contact[];
 
-    constructor(id:string, name:string, email:string, phone:string, imageURL:string, group:string) {
+    constructor(id:string, name:string, email:string, phone:string, imageUrl:string, group:Contact[]) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.phone = phone;
-        this.imageURL = imageURL;
+        this.imageUrl = imageUrl;
         this.group = group;
     }
 }

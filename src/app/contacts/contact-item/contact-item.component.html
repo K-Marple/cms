@@ -1,13 +1,13 @@
 <a 
     href="#" 
     class="list-group-item clearfix"
-    (click)="onClicked()">
+    (click)="onSelected()">
     <div class="pull-left">
         <h4 class="list-group-item-heading">{{ contact.name }}</h4>
     </div>  
     <span class="pull-right">
         <img 
-            [src]="contact.imageURL" 
+            [src]="contact.imageUrl" 
             alt="{{ contact.name }}" 
             class="img-responsive" 
             style="max-height: 50px;">
