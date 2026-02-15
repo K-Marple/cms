@@ -18,7 +18,8 @@ export class DocumentDetailComponent {
 
   constructor(private documentService: DocumentService,
               private windowRefService: WindRefService,
-              private route: ActivatedRoute) {}
+              private route: ActivatedRoute,
+              private router: Router) {}
   
   ngOnInit() {
     this.route.params.subscribe(
@@ -34,5 +35,10 @@ export class DocumentDetailComponent {
     if (this.document.url) {
       this.nativeWindow.open(this.document.url);
     }
+  }
+
+  onDelete() {
+    this.documentService.deleteDocument(this.document);
+    this.router.navigate(["/documents"]);
   }
 }
