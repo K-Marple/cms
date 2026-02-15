@@ -8,10 +8,4 @@ import { Component, Input, signal } from '@angular/core';
 })
 export class AppComponent {
   protected readonly title = signal('cms');
-
-  @Input() selectedFeature = "documents";
-
-  switchView(selectedFeature: string) {
-    this.selectedFeature = selectedFeature;
-  }
 }
