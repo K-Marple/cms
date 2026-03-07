@@ -17,12 +17,12 @@ export class ContactListComponent implements OnInit, OnDestroy {
   constructor(private contactService: ContactService) { }
 
   ngOnInit() {
-    this.contacts = this.contactService.getContacts();
     this.subscription = this.contactService.contactChangedEvent.subscribe(
       (contacts: Contact[]) => {
         this.contacts = contacts;
       }
     )
+    this.contactService.getContacts();
   }
 
   ngOnDestroy() {
